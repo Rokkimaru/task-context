@@ -24,14 +24,11 @@ export function App() {
 }
 
 function List(props: { data: IItem[] }) {
+    const theme = useTheme();
     return (
         <div>
             {data.map((item) => (
-                <ListItem
-                    theme={useTheme()}
-                    caption={item.name}
-                    key={item.id}
-                />
+                <ListItem theme={theme} caption={item.name} key={item.id} />
             ))}
         </div>
     );
